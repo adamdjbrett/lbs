@@ -4,12 +4,12 @@ language: en
 locale: en_US
 image: /img/logofooter.avif
 favicon: /img/logofooter.avif
-url: http://localhost:8080
+url: https://lyonspsychologicalservices.com
 
 redirects:
   title: "Lyons Behavioral Services is now Lyons Psychological Services, PLLC"
   information: 
     text: "You will be automatically redirected to "
     site: "Lyons Psychological Services, PLLC"
-    url: "https://www.adamdjbrett.com"
+    url: "http://lyonspsychologicalservices.com/"
     second: 3
