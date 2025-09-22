@@ -1,11 +1,3 @@
-# lbs
-
-### How to
-
-Open `_data/metadata.yaml`
-
-```
-# SEO Configuration
 title: Lyons Behavioral Services
 description: Lyons Behavioral Services is now Lyons Psychological Services, PLLC
 language: en
@@ -14,8 +6,6 @@ image: /img/logofooter.avif
 favicon: /img/logofooter.avif
 url: http://localhost:8080
 
-
-# Redirect Link URL
 redirects:
   title: "Lyons Behavioral Services is now Lyons Psychological Services, PLLC"
   information: 
@@ -23,6 +13,3 @@ redirects:
     site: "Lyons Psychological Services, PLLC"
     url: "https://www.adamdjbrett.com"
     second: 3
-```
-
-Change your redirects on `_data/metadata.yaml` , and update with your redirect url
