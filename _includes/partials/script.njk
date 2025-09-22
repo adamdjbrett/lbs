@@ -1,0 +1,23 @@
+<script>
+    window.onload = function() {
+        var countdownElement = document.getElementById('countdown');
+        var redirectButton = document.getElementById('redirect-button');
+        var redirectURL = '{{metadata.redirects.information.url}}';
+        var countdown = parseInt(countdownElement.textContent, 10);
+
+        function updateCountdown() {
+            countdown--;
+            countdownElement.textContent = countdown;
+            if (countdown <= 0) {
+                clearInterval(interval);
+                window.location.href = redirectURL;
+            }
+        }
+
+        var interval = setInterval(updateCountdown, 1000);
+
+        redirectButton.addEventListener('click', function() {
+            window.location.href = redirectURL;
+        });
+    };
+</script>

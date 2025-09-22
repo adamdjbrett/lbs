@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="{{ metadata.redirects.information.second }};url={{ metadata.redirects.information.url }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{title or metadata.title}}</title>
+	<meta content="{{title or metadata.title}}" property="og:title">
+	<meta content="{{title or metadata.title}}" name="twitter:title">
+	<meta content="{{title or metadata.title}}" name="title">
+	<meta content="{{title or metadata.title}}" property="og:site_name">
+	<meta content="{{description or metadata.description}}" name="description">
+	<meta content="{{description or metadata.description}}" property="facebook:description">
+	<meta content="{{description or metadata.description}}" property="og:description">
+	<meta content="{{description or metadata.description}}" name="twitter:description">
+	<meta property="twitter:card" content="summary_large_image">
+	<meta content="{{image or metadata.favicon}}" name="twitter:image">
+	<meta content="{{image or metadata.favicon}}" name="facebook:image">
+	<meta content="{{image or metadata.favicon}}" name="og:image">
+	<link href="{{metadata.favicon}}" rel="icon" type="image/x-icon">
+	<meta property="og:type" content="website">
+	<link rel="canonical" href="{{metadata.url}}{{page.url}}">
+	<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+	<meta name="language" content="{{metadata.language}}">
+	<meta name="locale" content="{{metadata.locale}}">
+	<meta property="og:locale" content="{{metadata.locale}}">
+	<meta name="generator" content="{{ eleventy.generator }}"> 
+	<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","description":"{{metadata.description}}","headline":"{{metadata.title}} - {{metadata.description}}","name":"{{metadata.title}}","url":"{{metadata.url}}{{page.url}}"}</script>
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+    <style>{% include "css/index.css" %}</style>
+    <style>{% getBundle "css" %}</style>
+</head>
+<body>
+    <a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+    <main id="main">
+        <div class="container">
+            <h1>{{ metadata.redirects.title }}</h1>
+            <p class="redirect-text">
+                {{ metadata.redirects.information.text }}
+                <strong>
+                    <a href="{{ metadata.redirects.information.url }}">
+                        {{ metadata.redirects.information.site }}
+                    </a>
+                </strong>
+                in <span id="countdown">{{ metadata.redirects.information.second }}</span> second...
+            </p>
+            <button id="redirect-button">Click here if not redirected</button>
+        </div>
+<script defer src="/js/script.js"></script>
+</body>
+</html>
